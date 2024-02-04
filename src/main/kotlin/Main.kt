@@ -18,15 +18,18 @@ fun main() {
 
     // using anonymous class to implements AirPlaine 'Fly()' method
     var plane = ( object : Vehicles.AirPlaine{
-            override fun Fly() {
+            override fun fly() {
                  println(" Airplane flying.....")
             }
     })
+    plane.fly()
 
     // using lambda expression to subscribe the abstract method 'goToBacking'
     var car = Vehicles.Car {
             println(" Car going to back.....")
     }
+    car.goToBacking();
+
 
     // overriding two methods of super interface Vehicles
     var genericVehicle = ( object: Vehicles{
@@ -39,6 +42,9 @@ fun main() {
                    return  speed.toString()
             }
     })
+    genericVehicle.accelerate( 12);
+    genericVehicle.speed(27)
+
 
      //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
@@ -59,6 +65,31 @@ fun main() {
 
     vargars();
 
+
+    println("\n ============== Generics ==================== \n");
+
+    var myStack  = MutableStack<String>(  "Empoleon", "Pinsir", "Infernape", "Torterra", "Drapion",  "Murkrow", "Honchkrow", "Excadrill", "Gabite" );
+
+    myStack.push("Togetic")
+    println( myStack )
+
+    println( " last element: {$myStack.peek()} " )
+
+    for( i in 1..myStack.getSize() ){
+         println( " removing element: ${myStack.pop()} ");
+    }
+
 }
+
+class GenericExample<V>( itens : List<V> ) {
+
+    val itenss = itens;
+
+    private fun getList() :List<V>{
+           return this.itenss;
+    }
+
+}
+
 
 

@@ -37,9 +37,9 @@ class MutableStack<E> ( vararg items: E  ){
 
     private val elements :MutableList<E> = items.toMutableList();
 
-    fun push( newElement: E) = this.elements.add( newElement );
+    fun push( newElement: E ) = this.elements.add( newElement );
 
-    fun peek(): E = this.elements.last<E>();
+    fun peek(): E = this.elements.last();
 
     fun pop(): E = this.elements.removeAt( elements.size-1 );
 
