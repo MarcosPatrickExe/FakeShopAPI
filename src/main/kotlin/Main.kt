@@ -1,5 +1,6 @@
 package org.example
 
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
@@ -7,13 +8,16 @@ fun main() {
 
     var pessoa =  Person( "ferdinando", 19  );
 
-    val additionalCont =  AdditionalContent( "kotlin programming", 30 );
+    var  clothes =  PersonClothers(
+                                         listOf<Clothe>( Clothe("t-shirt", 'M', null)    ),
+                                        1
+                           );
 
      //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
     println("Hello,  "+pessoa.getName(  null ) + "!    \n")
 
-    println(" content:  ${additionalCont.contentName} ");
+    println(" content:  ${clothes.clothes.get(0).name} ");
 
 
 
@@ -25,7 +29,9 @@ fun main() {
 }
 
 
-data class AdditionalContent( var contentName :String, val  duration :Int = 30);
+data class PersonClothers( var clothes: List<Clothe>, val  amount :Int = 3 );
+
+data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? );
 
 
 class Person{
