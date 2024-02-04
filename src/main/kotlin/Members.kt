@@ -56,8 +56,9 @@ class MutableStack<E> ( vararg items: E  ){
 
 }
 
+class Example
 
-class Animal<V, K> {
+class Pokemon<V, K> {
 
     private var animals :HashMap<V, K>;
 

@@ -80,12 +80,21 @@ fun main() {
          println( " removing element: ${myStack.pop()} ");
     }
 
-    val pokemons = HashMap<String, String>();
-    pokemons.put("Blastoise", "Water");
-    pokemons.put("Blastoise", "Water");
-
     val mutablesByFun = mutableStackOf<String>(   "Eevee", "Flareon", "Vaporeon", "Umbreon", "Joteon",  "Glaceon", "Leafeon"   );
     println( mutablesByFun );
+
+
+    println("\n ============== Flow control ==================== \n");
+
+    println("When Statement")
+    cases( obj = 23L )
+
+    println("When Expression \n ${whenAssign(  Example()  )}");
+
+
+    println("\n ============== Iterating ==================== \n");
+
+
 }
 
 

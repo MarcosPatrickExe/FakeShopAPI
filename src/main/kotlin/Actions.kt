@@ -20,8 +20,8 @@ fun vargars(){
         printPokemons( *entries ); // sending vararg to other vararg argument func
     }
 
-    fun checkIsNullable( value :String? ) : Int {
-        return value?.length ?: 0  // using the Elvis operator to indentify the nullable value. If value is null, returns 'false'
+    fun checkIsNullable( value :String? ) : Any {
+        return value?.length ?:  "Yes"  // using the Elvis operator to indentify the nullable value. If value is null, returns 'false'
     }
 
 
@@ -31,6 +31,27 @@ fun vargars(){
     print("\nTEST  is nullable?  "+checkIsNullable( null ) );
 }
 
-fun <Z> mutableStackOf( vararg elements: String) = MutableStack( *elements )
+fun <Z> mutableStackOf( vararg elements: Z) = MutableStack( *elements )
 
 
+fun cases( obj : Any){
+        when( obj ){
+                1 -> println(" is number one \n")
+                "Hello" -> println(" Greeting \n")
+                is Long -> println(" is a Long type \n")
+                !is String -> println(" Not a String \n")
+                else -> println(" Unknown \n")
+        }
+}
+
+fun whenAssign( obj :Any) : Any{
+
+      val result = when(obj){
+             1 -> "one"
+             "Hello" -> 1
+             is Long -> false
+             else -> 42
+      }
+
+      return result
+}
