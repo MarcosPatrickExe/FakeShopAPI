@@ -84,8 +84,8 @@ fun main() {
     pokemons.put("Blastoise", "Water");
     pokemons.put("Blastoise", "Water");
 
-    val mutablesByFun = mutableStackOf(   "Eevee", "Flareon", "Vaporeon", "Umbreon", "Joteon",  "Glaceon", "Leafeon"   );
-
+    val mutablesByFun = mutableStackOf<String>(   "Eevee", "Flareon", "Vaporeon", "Umbreon", "Joteon",  "Glaceon", "Leafeon"   );
+    println( mutablesByFun );
 }
 
 

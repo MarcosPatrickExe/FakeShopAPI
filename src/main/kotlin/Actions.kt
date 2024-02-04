@@ -31,6 +31,6 @@ fun vargars(){
     print("\nTEST  is nullable?  "+checkIsNullable( null ) );
 }
 
-fun <Z> mutableStackOf( vararg elements : Z ) = MutableStack( *elements )
+fun <Z> mutableStackOf( vararg elements: String) = MutableStack( *elements )
 
 
