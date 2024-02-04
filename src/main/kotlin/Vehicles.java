@@ -4,11 +4,10 @@ public interface Vehicles {
 
        abstract void accelerate(  Integer acceleration  );
 
-       abstract void speed(  final Integer speed  );
+       abstract String speed(  final Integer speed  );
 
 
        interface Car{
-
               void goToBacking( );
        }
 
@@ -16,3 +15,4 @@ public interface Vehicles {
                void Fly( );
         }
 }
+

@@ -30,8 +30,9 @@ fun main() {
                    println(" Airplane flying.....")
             }
 
-            override fun speed(   speed :Int  ) {
+            override fun speed(   speed :Int  ) :String {
                    println(" Airplane flying.....")
+                   return  speed.toString()
             }
     })
 
