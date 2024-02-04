@@ -25,22 +25,25 @@ fun main() {
     }
 
     // overriding two methods of super interface Vehicles
-    var genericVehicle = (object: Vehicles{
+    var genericVehicle = ( object: Vehicles{
             override fun accelerate(   acceleration :Int  ) :Unit {
                    println(" Airplane flying.....")
             }
 
-            override fun speed(   speed :Int  ) :String {
+            final override fun speed(   speed :Int  ) :String {  //  prohibit re-overriding
                    println(" Airplane flying.....")
                    return  speed.toString()
             }
     })
+
 
      //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
     println("Hello,  "+pessoa.getName(  null ) + "!    \n")
 
     println(" content:  ${clothes.clothes.get(0).name} ");
+
+    println(" getCrossProduct:   ${getCrossProduct( X=2.4,  Y = 34.3, X2 = 2.3, Y2 =3.1  ) }  ")
 
 
     for (  i in 1..5) {
@@ -51,36 +54,36 @@ fun main() {
 }
 
 
-data class PersonClothers( var clothes: List<Clothe>, val  amount :Int = 3 );
+data class PersonClothers( var clothes: List<Clothe>, val  amount :Int = 3 )
 
-data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? ); // automatically generated methods:  equals(), hashCode(), toString() and copy()
+data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? )  // automatically generated methods:  equals(), hashCode(), toString() and copy()
 
 
 open class Person{
 
-         private lateinit var isWorking :BooleanArray;
+        private lateinit var isWorking :BooleanArray
 
-         private val name: String;
+        private val name: String
 
-         private  var age: Any?;
+        private  var age: Any?
 
-         constructor( nameReceived :String, ageReceived :Any?  ){
-                this.name = nameReceived
-                this.age = ageReceived;
+        constructor( nameReceived :String, ageReceived :Any?  ){
+                 this.name = nameReceived
+                 this.age = ageReceived
         }
 
 
         fun getName(  anywayValue : Any? = 4 ) : String{
-             return this.name;
+                 return this.name
        }
 }
 
 
 class Teste : Person, Vehicles.Car {
 
-    constructor(nam: String, ag: Any?) : super(nam, ag);
+    constructor( nam: String, ag: Any? ) : super(nam, ag)
 
     override fun goToBacking() {
-            println(" goToBacking on Teste class...");
+            println(" goToBacking on Teste class...")
     }
 }
