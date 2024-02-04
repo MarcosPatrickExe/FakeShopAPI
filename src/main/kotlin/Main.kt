@@ -1,5 +1,5 @@
 package org.example
-
+import Vehicles;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -10,6 +10,7 @@ fun main() {
                                          listOf<Clothe>( Clothe("t-shirt", 'M', null)    ),
                                         1
                            );
+
 
     // using anonymous class to implements AirPlaine 'Fly()' method
     var plane = ( object : Vehicles.AirPlaine{
@@ -23,6 +24,16 @@ fun main() {
             println(" Car going to back.....")
     }
 
+    // overriding two methods of super interface Vehicles
+    var genericVehicle = (object: Vehicles{
+            override fun accelerate(   acceleration :Int  ) :Unit {
+                   println(" Airplane flying.....")
+            }
+
+            override fun speed(   speed :Int  ) {
+                   println(" Airplane flying.....")
+            }
+    })
 
      //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
