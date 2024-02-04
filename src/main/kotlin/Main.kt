@@ -1,5 +1,6 @@
 package org.example
-import Vehicles;
+import Vehicle
+import Vehicle.*;
 import java.awt.Color;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -17,7 +18,7 @@ fun main() {
 
 
     // using anonymous class to implements AirPlaine 'Fly()' method
-    var plane = ( object : Vehicles.AirPlaine{
+    var plane = ( object : AirPlaine{
             override fun fly() {
                  println(" Airplane flying.....")
             }
@@ -25,14 +26,14 @@ fun main() {
     plane.fly()
 
     // using lambda expression to subscribe the abstract method 'goToBacking'
-    var car = Vehicles.Car {
+    var car = Vehicle.Car {
             println(" Car going to back.....")
     }
     car.goToBacking();
 
 
     // overriding two methods of super interface Vehicles
-    var genericVehicle = ( object: Vehicles{
+    var genericVehicle = ( object: Vehicle {
             override fun accelerate(   acceleration :Int  ) :Unit {
                    println(" Airplane flying.....")
             }
@@ -79,17 +80,15 @@ fun main() {
          println( " removing element: ${myStack.pop()} ");
     }
 
-}
+    val pokemons = HashMap<String, String>();
+    pokemons.put("Blastoise", "Water");
+    pokemons.put("Blastoise", "Water");
 
-class GenericExample<V>( itens : List<V> ) {
-
-    val itenss = itens;
-
-    private fun getList() :List<V>{
-           return this.itenss;
-    }
+    val mutablesByFun = mutableStackOf(   "Eevee", "Flareon", "Vaporeon", "Umbreon", "Joteon",  "Glaceon", "Leafeon"   );
 
 }
+
+
 
 
 

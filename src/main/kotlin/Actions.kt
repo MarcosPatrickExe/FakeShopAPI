@@ -1,5 +1,7 @@
 package org.example
 
+// ======  FILE FOR DECLARATION OF FUNCTIONS  =========
+
 inline fun getCrossProduct(  X: Double, Y: Double, X2: Double, Y2: Double  ) :Double =  (X * X2) - (Y * Y2);
 
 fun vargars(){
@@ -27,6 +29,8 @@ fun vargars(){
     printPokemonsByType( "Hitmonlee", "Machamp", "", "Gallade", "Poliwrath", title = "Fighters pokemons" )
     log( "Lapras", "Shedinja", "Rhyhorn" )
     print("\nTEST  is nullable?  "+checkIsNullable( null ) );
-
-
 }
+
+fun <Z> mutableStackOf( vararg elements : Z ) = MutableStack( *elements )
+
+

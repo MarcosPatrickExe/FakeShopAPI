@@ -1,9 +1,12 @@
 package org.example
 
+import Vehicle
+
+// ====== FILE FOR DECLARATION CLASSES =========
+
 data class PersonClothers( var clothes: List<Clothe>, val  amount :Int = 3 )
 
 data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? )  // automatically generated methods:  equals(), hashCode(), toString() and copy()
-
 
 open class Person{
 
@@ -22,7 +25,7 @@ open class Person{
 }
 
 
-class Teste : Person, Vehicles.Car {
+class Teste : Person, Vehicle.Car {
     constructor( nam: String, ag: Any? ) : super(nam, ag)
 
     override fun goToBacking() {
@@ -54,4 +57,16 @@ class MutableStack<E> ( vararg items: E  ){
 }
 
 
+class Animal<V, K> {
+
+    private var animals :HashMap<V, K>;
+
+    constructor( newAnimals: HashMap<V, K> ){
+            this.animals = newAnimals;
+    }
+
+    public fun getList() :HashMap<V, K>{
+          return this.animals;
+    }
+}
 
