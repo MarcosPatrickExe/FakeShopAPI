@@ -5,20 +5,30 @@ package org.example
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
     val name = "Kotlin"
-
     var pessoa =  Person( "ferdinando", 19  );
-
     var  clothes =  PersonClothers(
                                          listOf<Clothe>( Clothe("t-shirt", 'M', null)    ),
                                         1
                            );
+
+    // using anonymous class to implements AirPlaine 'Fly()' method
+    var plane = ( object : Vehicles.AirPlaine{
+            override fun Fly() {
+                 println(" Airplane flying.....")
+            }
+    })
+
+    // using lambda expression to subscribe the abstract method 'goToBacking'
+    var car = Vehicles.Car {
+            println(" Car going to back.....")
+    }
+
 
      //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
     println("Hello,  "+pessoa.getName(  null ) + "!    \n")
 
     println(" content:  ${clothes.clothes.get(0).name} ");
-
 
 
     for (  i in 1..5) {
@@ -31,7 +41,7 @@ fun main() {
 
 data class PersonClothers( var clothes: List<Clothe>, val  amount :Int = 3 );
 
-data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? );
+data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? ); // automatically generated methods:  equals(), hashCode(), toString() and copy()
 
 
 class Person{
