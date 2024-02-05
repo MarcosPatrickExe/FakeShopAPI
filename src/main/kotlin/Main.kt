@@ -95,16 +95,16 @@ fun main() {
     println("\n ============== Iterating ==================== \n");
 
     val pokemons = HashMap<String, PokeTypes>();
-    pokemons.put("Blastoise", PokeTypes.WATER);
-    pokemons.put("Ursaring",  PokeTypes.NORMAL);
+    pokemons.put("Blastoise", PokeTypes.WATER )
+    pokemons.put("Ursaring",  PokeTypes.NORMAL )
 
-    var pokes  = Pokemons( pokemons );
+    var pokes  = Pokemons( pokemons )
 
     for (poke  in  pokes.getPokes() ){
             println(" pokemon name is  ${ poke.toPair().first}  of type  ${ poke.toPair().second} "  )
     }
 
-    rangesWithIntChar();
+    //rangesWithIntChar();
 }
 
 

@@ -33,7 +33,7 @@ fun vargars(){
 
 fun <Z> mutableStackOf( vararg elements: Z) = MutableStack( *elements )
 
-
+// When statement
 fun cases( obj : Any){
         when( obj ){
                 1 -> println(" is number one \n")
@@ -44,6 +44,7 @@ fun cases( obj : Any){
         }
 }
 
+// When expression
 fun whenAssign( obj :Any) : Any{
 
       val result = when(obj){
@@ -56,8 +57,14 @@ fun whenAssign( obj :Any) : Any{
       return result
 }
 
+fun max( A: Int, B:Int) = if( A > B) A else B  // if expession form, as "ternary operator"
+
+
+
+
 // =============== FORs ======================
 
+/*
 fun rangesWithIntChar(){
 
     for(i in 0..3){ // 0, 1, 2, 3
@@ -87,6 +94,10 @@ fun rangesWithIntChar(){
     for( c in 'z' downTo 's' step 2){ // z, x, v, t
         print(c)
     }
+    println();
+
+    if( 6 in 1.. 10){ println("number six is in range! ") }
+
+    if( 16 !in 1.. 10){ println("number sixteen is not in range from 6 o 10!  ") }
 }
-
-
+*/
