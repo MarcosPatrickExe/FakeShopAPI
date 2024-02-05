@@ -55,3 +55,38 @@ fun whenAssign( obj :Any) : Any{
 
       return result
 }
+
+// =============== FORs ======================
+
+fun rangesWithIntChar(){
+
+    for(i in 0..3){ // 0, 1, 2, 3
+        print(i)
+    }
+    println();
+    for(i in 0 until 3){ // 0, 1, 2
+        print(i)
+    }
+    println();
+    for(i in 2..8 step 3){ // 2, 5, 8
+        print(i)
+    }
+    println();
+    for(i in 3 downTo 0){ // 3, 2, 1, 0
+        print(i)
+    }
+    println();
+    for( c in 'a' .. 'h'){ // a, b, c, d, e, f, g, h
+        print(c)
+    }
+    println();
+    for( c in 'z' downTo 's'){ // z, y, x, w, v, u, t, s
+        print(c)
+    }
+    println();
+    for( c in 'z' downTo 's' step 2){ // z, x, v, t
+        print(c)
+    }
+}
+
+

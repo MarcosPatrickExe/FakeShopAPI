@@ -58,16 +58,26 @@ class MutableStack<E> ( vararg items: E  ){
 
 class Example
 
-class Pokemon<V, K> {
+class Pokemons<V, PokeTypes> {
 
-    private var animals :HashMap<V, K>;
+    private val pokemons :HashMap<V, PokeTypes>;
 
-    constructor( newAnimals: HashMap<V, K> ){
-            this.animals = newAnimals;
+    constructor( newAnimals: HashMap<V, PokeTypes> ){
+            this.pokemons = newAnimals;
     }
 
-    public fun getList() :HashMap<V, K>{
-          return this.animals;
+    public fun getPokes() :HashMap<V, PokeTypes>{
+          return this.pokemons;
+    }
+
+    operator fun iterator():  MutableIterator<MutableMap.MutableEntry<V, PokeTypes>>{ // making class
+           return this.pokemons.iterator()
     }
 }
 
+
+
+/*
+    List<out T> in Kotlin is equivalent to List<? extends T> in Java.
+    List<in T> in Kotlin is equivalent to List<? super T> in Java
+*/
