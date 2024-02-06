@@ -103,9 +103,11 @@ fun main() {
     for (poke  in  pokes.getPokes() ){
             println(" pokemon name is  ${ poke.toPair().first}  of type  ${ poke.toPair().second} "  )
     }
-
-
     //rangesWithIntChar();
+
+
+    println("\n ============== Collections ==================== \n");
+    useColletions();
 }
 
 

@@ -1,15 +1,22 @@
 package org.example
 
-class Colletions {
+val systemUsers: MutableList<PokeTypes> = mutableListOf( PokeTypes.NORMAL, PokeTypes.FIGHT, PokeTypes.BUG)
+val sudoers:  List<PokeTypes> = systemUsers  // read-only list copy of 'systemUsers'
+
+fun addSystemPokemon(  poke :PokeTypes   ){
+      systemUsers.add( poke);
+}
+fun getPokemonList( ): List<PokeTypes>{
+     return sudoers;
 }
 
-fun usingCollections(){
+fun useColletions(){
 
-    val systemUsers: MutableList<Int> = mutableListOf(1, 2, 3)
-    val sudoers:  List<Int> = systemUsers  // criando copia somente de leitura da lista 'systemUsers'
+    addSystemPokemon( PokeTypes.ELETRIC );
+    println(" list of amount pokemons types:   ${getPokemonList().size }  ");
 
-
-
-
+    getPokemonList().forEach {
+          type -> println( "some useful info on user: $type " );
+    }
 }
 
