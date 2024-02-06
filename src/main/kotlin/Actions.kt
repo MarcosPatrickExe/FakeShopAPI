@@ -46,7 +46,7 @@ fun cases( obj : Any){
 // When expression
 fun whenAssign( obj :Any) : Any{
 
-      val result = when(obj){
+      val result = when(obj) {
              1 -> "one"
              "Hello" -> 1
              is Long -> false

@@ -53,7 +53,7 @@ fun main() {
 
     println(" content:  ${clothes.clothes.get(0).name} ");
 
-    println(" getCrossProduct:   ${getCrossProduct( X=2.4,  Y = 34.3, X2 = 2.3, Y2 =3.1  ) }  ")
+    println(" getCrossProduct:  ${getCrossProduct( X=2.4,  Y = 34.3, X2 = 2.3, Y2 =3.1  ) }  ")
 
 
     for (  i in 1..5) {
@@ -103,6 +103,7 @@ fun main() {
     for (poke  in  pokes.getPokes() ){
             println(" pokemon name is  ${ poke.toPair().first}  of type  ${ poke.toPair().second} "  )
     }
+
 
     //rangesWithIntChar();
 }
