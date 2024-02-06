@@ -24,7 +24,6 @@ fun vargars(){
         return value?.length ?:  "Yes"  // using the Elvis operator to indentify the nullable value. If value is null, returns 'false'
     }
 
-
     printPokemons( "Tyranitar", "Charizard", "Pikachu", "Dragonite")
     printPokemonsByType( "Hitmonlee", "Machamp", "", "Gallade", "Poliwrath", title = "Fighters pokemons" )
     log( "Lapras", "Shedinja", "Rhyhorn" )

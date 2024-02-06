@@ -38,7 +38,7 @@ class Teste : Person, Vehicle.Car {
 
 class MutableStack<E> ( vararg items: E  ){
 
-    private val elements :MutableList<E> = items.toMutableList();
+    private var elements :MutableList<E> = items.toMutableList();
 
     fun push( newElement: E ) = this.elements.add( newElement );
 
@@ -70,7 +70,7 @@ class Pokemons<V, PokeTypes> {
           return this.pokemons;
     }
 
-    operator fun iterator():  MutableIterator<MutableMap.MutableEntry<V, PokeTypes>>{ // making class
+    operator fun iterator():  MutableIterator<MutableMap.MutableEntry<V, PokeTypes>>{ // making class iterable
            return this.pokemons.iterator()
     }
 }
