@@ -97,7 +97,7 @@ fun main() {
     val pokemons = HashMap<String, PokeTypes>();
     pokemons.put("Blastoise", PokeTypes.WATER )
     pokemons.put("Ursaring",  PokeTypes.NORMAL )
-    pokemons.put("Ursaring",  PokeTypes.DRAGON )
+    pokemons.put("Salamence",  PokeTypes.DRAGON )
 
     var pokes  = Pokemons( pokemons )
 
