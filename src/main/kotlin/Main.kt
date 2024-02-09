@@ -73,7 +73,6 @@ fun main() {
 
     myStack.push("Togetic")
     println( myStack )
-
     println( " last element: {$myStack.peek()} " )
 
     for( i in 1..myStack.getSize() ){
@@ -83,6 +82,15 @@ fun main() {
     val mutablesByFun = mutableStackOf<String>(   "Eevee", "Flareon", "Vaporeon", "Umbreon", "Joteon",  "Glaceon", "Leafeon"   );
     println( mutablesByFun );
 
+    // OU TBM:
+    val ages: MutableList<Int> = mutableListOf(23, 15, 45, 17, 65, 18, 19, 20);
+    val agesCopy :List<Int> = ages
+    ages.add(78)
+    ages.add(101)
+    println(  "New values addited to 'ages'. See now the values of 'agesCopy' below: ");
+
+    agesCopy.forEach {  item -> print("$item, "); }
+    // agesCopy.add()  is forbbiden! The List type é unmutable
 
     println("\n ============== Flow control ==================== \n");
 
