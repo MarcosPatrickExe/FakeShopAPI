@@ -98,6 +98,7 @@ fun main() {
     pokemons.put("Blastoise", PokeTypes.WATER )
     pokemons.put("Ursaring",  PokeTypes.NORMAL )
     pokemons.put("Salamence",  PokeTypes.DRAGON )
+    pokemons.put("Ekans",  PokeTypes.POISON )
 
     var pokes  = Pokemons( pokemons )
 
