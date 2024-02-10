@@ -118,6 +118,11 @@ fun main() {
 
     println("\n ============== Collections ==================== \n");
     useColletions();
+
+    val openIssues : MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescription", "unique");
+
+
+
 }
 
 
