@@ -120,7 +120,13 @@ fun main() {
     useColletions();
 
     val openIssues : MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescription", "unique");
+    val issueDuplicated= "unique"
 
+    println("\nValue of Set:  \n${
+          getStatusLog(
+               addIssue(  currentIssues = openIssues,  newIssue = issueDuplicated) 
+          )
+    }");
 
 
 }

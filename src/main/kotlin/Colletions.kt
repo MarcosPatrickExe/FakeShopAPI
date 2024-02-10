@@ -10,6 +10,7 @@ fun getPokemonList( ): List<PokeTypes>{
      return sudoers;
 }
 
+
 fun useColletions(){
 
     addSystemPokemon( PokeTypes.ELETRIC );

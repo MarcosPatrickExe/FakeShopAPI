@@ -60,6 +60,15 @@ fun max( A: Int, B:Int) = if( A > B) A else B  // if expession form, as "ternary
 
 
 
+ fun addIssue( currentIssues :MutableSet<String>, newIssue:String ) :Boolean{
+    return  currentIssues.add( newIssue );
+}
+fun getStatusLog( isAdded:Boolean ) = if (isAdded) "registered correctly" else "marked as duplicate and rejected. "
+
+
+
+
+
 
 // =============== FORs ======================
 
