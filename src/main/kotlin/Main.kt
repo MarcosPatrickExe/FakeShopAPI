@@ -122,12 +122,16 @@ fun main() {
     val openIssues : MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescription", "unique");
     val issueDuplicated= "unique"
 
-    println("\nValue of Set:  \n${
+    println("\nAdding value to Set collection:  \n${
           getStatusLog(
-               addIssue(  currentIssues = openIssues,  newIssue = issueDuplicated) 
+               addIssue(  currentIssues = openIssues,  newIssue = "uniqueDesc4") 
           )
     }");
-
+    println("\nAdding value to the Set with duplicated values:  \n${
+        getStatusLog(
+            addIssue(  currentIssues = openIssues,  newIssue = issueDuplicated)
+        )
+    }");
 
 }
 
