@@ -124,14 +124,17 @@ fun main() {
 
     println("\nAdding value to Set collection:  \n${
           getStatusLog(
-               addIssue(  currentIssues = openIssues,  newIssue = "uniqueDesc4") 
+                addIssue(  currentIssues = openIssues,  newIssue = "uniqueDesc4") 
           )
     }");
     println("\nAdding value to the Set with duplicated values:  \n${
         getStatusLog(
-            addIssue(  currentIssues = openIssues,  newIssue = issueDuplicated)
+               addIssue(  currentIssues = openIssues,  newIssue = issueDuplicated)
         )
     }");
+
+
+    println("============ MAPs ================");
 
 }
 

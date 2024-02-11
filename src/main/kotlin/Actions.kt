@@ -56,12 +56,12 @@ fun whenAssign( obj :Any) : Any{
       return result
 }
 
-fun max( A: Int, B:Int) = if( A > B) A else B  // if expession form, as "ternary operator"
+fun max( A: Int, B:Int) = if( A > B)  A else B  // if expession form, as "ternary operator"
 
 
 
  fun addIssue( currentIssues :MutableSet<String>, newIssue:String ) :Boolean{
-    return  currentIssues.add( newIssue );
+        return  currentIssues.add( newIssue );
 }
 fun getStatusLog( isAdded:Boolean ) = if (isAdded) "registered correctly" else "marked as duplicate and rejected. "
 

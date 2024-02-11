@@ -1,5 +1,7 @@
 package org.example
 
+
+// ===================== MUTABLE LIST ===========================
 val systemUsers: MutableList<PokeTypes> = mutableListOf( PokeTypes.NORMAL, PokeTypes.FIGHT, PokeTypes.BUG)
 val sudoers:  List<PokeTypes> = systemUsers  // read-only list copy of 'systemUsers'
 
@@ -10,7 +12,6 @@ fun getPokemonList( ): List<PokeTypes>{
      return sudoers;
 }
 
-
 fun useColletions(){
 
     addSystemPokemon( PokeTypes.ELETRIC );
@@ -20,4 +21,25 @@ fun useColletions(){
           type -> println( "some useful info on user: $type " );
     }
 }
+
+
+// ===================== HASH MAP ===========================
+const val PLAYERS_AND_SCORE :Int = 15
+val PlayersPoints :MutableMap<String, Int> = mutableMapOf(     "John" to 18,      "Elizabeth" to 27,        "Razor" to 5  )
+                                        //     it's that :    ......... mutableMapOf(   Pair("John", 18),   Pair("Elizabeth", 27),    Pair("Razor", 5)  )
+
+fun updateScore( playerId: String ){
+        if(   PlayersPoints.containsKey(playerId)   ){
+              println( "Updating the ''PlayersPoints'  MapList...." )
+              var newScore :Int = PlayersPoints.getValue(playerId) +PLAYERS_AND_SCORE;
+              PlayersPoints[playerId] =  newScore
+              println( "The player $playerId now has the value:  $newScore");
+        }
+}
+
+
+
+
+
+
 
