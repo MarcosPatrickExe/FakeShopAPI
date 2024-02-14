@@ -137,6 +137,8 @@ fun main() {
     println("============ MAPs ================");
     println(" updanting score of the player 'John'.... ");
     updateScore( "John" );
+    geListPlayers();
+
 }
 
 

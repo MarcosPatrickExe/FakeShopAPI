@@ -27,18 +27,26 @@ fun useColletions(){
 
 // ===================== HASH MAP ===========================
 const val PLAYERS_AND_SCORE :Int = 15
-val PlayersPoints :MutableMap<String, Int> = mutableMapOf(     "John" to 18,      "Elizabeth" to 27,        "Razor" to 5  )
+val PlayersPoints :MutableMap<String, Int> = mutableMapOf(   "John"  to 18,     "Elizabeth" to 27,        "Razor" to 5  )
                                         //     it's that :    ......... mutableMapOf(   Pair("John", 18),   Pair("Elizabeth", 27),    Pair("Razor", 5)  )
+val PlayerPointsCopy  = PlayersPoints;
 
 fun updateScore( playerId: String ){
         if(   PlayersPoints.containsKey(playerId)   ){
               println( "Updating the ''PlayersPoints'  MapList...." )
-              var newScore :Int = PlayersPoints.getValue(playerId) +PLAYERS_AND_SCORE;
+              var newScore :Int = PlayersPoints.getValue( playerId ) +PLAYERS_AND_SCORE;
               PlayersPoints[playerId] =  newScore
               println( "The player $playerId now has the value:  $newScore");
+        }else{
+              println("Not found a player with ID: $playerId.... ");
         }
 }
 
+fun geListPlayers(){
+    PlayerPointsCopy.forEach{
+             k, v -> println("player $k points: $v")
+    }
+}
 
 
 
