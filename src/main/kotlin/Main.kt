@@ -119,7 +119,7 @@ fun main() {
     println("\n ============== Collections ==================== \n");
     useColletions();
 
-    val openIssues : MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescription", "unique");
+    val openIssues : MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescription", "unique", "unique 2");
     val issueDuplicated= "unique"
 
     println("\nAdding value to Set collection:  \n${
