@@ -136,7 +136,10 @@ fun main() {
 
 
     println("\n================= MAPs ====================\n");
-    println("-> Updanting score of the player 'John'.... ");
+    println("-> Listing initial players'.... \n");
+    geListPlayers();
+
+    println("\n-> Updanting score of the player 'John'.... ");
     updateScore( "John" );
     updateScore( "Brenda" );
     geListPlayers();
