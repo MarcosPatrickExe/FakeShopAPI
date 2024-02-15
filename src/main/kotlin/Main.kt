@@ -141,7 +141,7 @@ fun main() {
 
     println("\n-> Updanting score of the player 'John'.... ");
     updateScore( "John" );
-    updateScore( "Brenda" );
+    updateScore( playerId = "Brenda" ); // example using the nomead example
     geListPlayers();
 
 }
