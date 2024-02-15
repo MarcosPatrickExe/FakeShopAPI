@@ -87,12 +87,13 @@ fun main() {
     val agesCopy :List<Int> = ages
     ages.add(78)
     ages.add(101)
-    println(  "New values addited to 'ages'. See now the values of 'agesCopy' below: ");
+    println(  "\nNew values addited to 'ages'. See now the values of 'agesCopy' below: ");
 
     agesCopy.forEach {  item -> print("$item, "); }
+
     // agesCopy.add()  is forbbiden! The List type é unmutable
 
-    println("\n ============== Flow control ==================== \n");
+    println("\n============== Flow control ==================== \n");
 
     println("When Statement")
     cases( obj = 23L )
@@ -122,21 +123,22 @@ fun main() {
     val openIssues : MutableSet<String> = mutableSetOf("uniqueDescr1", "uniqueDescription", "unique", "unique 2");
     val issueDuplicated= "unique"
 
-    println("\nAdding value to Set collection:  \n${
+    println("\n-> Adding value to Set collection:  \n${
           getStatusLog(
                 addIssue(  currentIssues = openIssues,  newIssue = "uniqueDesc4") 
           )
     }");
-    println("\nAdding value to the Set with duplicated values:  \n${
+    println("\n-> Adding value to the Set with duplicated values:  \n${
         getStatusLog(
                addIssue(  currentIssues = openIssues,  newIssue = issueDuplicated)
         )
     }");
 
 
-    println("============ MAPs ================");
-    println(" updanting score of the player 'John'.... ");
+    println("\n ============ MAPs ================");
+    println("-> Updanting score of the player 'John'.... ");
     updateScore( "John" );
+    updateScore( "Brenda" );
     geListPlayers();
 
 }
