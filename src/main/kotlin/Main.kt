@@ -67,7 +67,7 @@ fun main() {
     vargars();
 
 
-    println("\n ============== Generics ==================== \n");
+    println("\n \n ============== Generics ==================== \n");
 
     var myStack  = MutableStack<String>(  "Empoleon", "Pinsir", "Infernape", "Torterra", "Drapion",  "Murkrow", "Honchkrow", "Excadrill", "Gabite" );
 
@@ -93,7 +93,7 @@ fun main() {
 
     // agesCopy.add()  is forbbiden! The List type é unmutable
 
-    println("\n============== Flow control ==================== \n");
+    println("\n \n============== Flow control ==================== \n");
 
     println("When Statement")
     cases( obj = 23L )
@@ -135,7 +135,7 @@ fun main() {
     }");
 
 
-    println("\n ============ MAPs ================");
+    println("\n================= MAPs ====================\n");
     println("-> Updanting score of the player 'John'.... ");
     updateScore( "John" );
     updateScore( "Brenda" );
