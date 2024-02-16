@@ -52,6 +52,11 @@ fun geListPlayers(){
 fun funUtilsCollections(){
         val numbers  = listOf(1, -2, 3, -4, -7)
         val positives = numbers.filter { x -> x > 0  } // filtering number more high than zero
+        val negatives = numbers.filter { it < 0} //the "it" expression defines that the boolean result expression will be returned
 
+        println("\n Lista de botões: ")
+        println("numbers:  $numbers")
+        println("numbers:  $positives")
+        println("numbers:  $negatives")
 }
 
