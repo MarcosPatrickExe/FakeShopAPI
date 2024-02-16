@@ -56,15 +56,15 @@ fun funUtilsCollections(){
 
         println("\n Lista de botões: ")
         println("numbers:  $numbers")
-        println("numbers:  $positives")
-        println("numbers:  $negatives")
+        println("positives:  $positives")
+        println("negatives:  $negatives")
 
         println("\napplying transformation to values of list with map: ")
         var doubled = positives.map { it -> it *2 } // redundant form
-        var tripled = positives.map { it *3 }
+        var tripled = negatives.map { it *3 }
 
         println("\n Lista de numeros duplicados e triplicados:  ")
-        println("numbers:  $doubled")
-        println("numbers:  $tripled")
+        println("positives doubled:  $doubled")
+        println("negatives numbers:  $tripled")
 }
 
