@@ -144,6 +144,10 @@ fun main() {
     updateScore( playerId = "Brenda" ); // example using the nomead example
     geListPlayers();
 
+
+    println("\n================= collection util funcs ====================\n");
+    funUtilsCollections()
+
 }
 
 
