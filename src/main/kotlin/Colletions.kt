@@ -50,6 +50,8 @@ fun geListPlayers(){
 
 
 fun funUtilsCollections(){
+        val numbers  = listOf(1, -2, 3, -4, -7)
+        val positives = numbers.filter { x -> x > 0  } // filtering number more high than zero
 
 }
 
