@@ -52,11 +52,19 @@ fun geListPlayers(){
 fun funUtilsCollections(){
         val numbers  = listOf(1, -2, 3, -4, -7)
         val positives = numbers.filter { x -> x > 0  } // filtering number more high than zero
-        val negatives = numbers.filter { it < 0} //the "it" expression defines that the boolean result expression will be returned
+        val negatives = numbers.filter { it < 0} //the "it" expression defines that the boolean result expression between parameter and right-side value will be returned
 
         println("\n Lista de botões: ")
         println("numbers:  $numbers")
         println("numbers:  $positives")
         println("numbers:  $negatives")
+
+        println("\napplying transformation to values of list with map: ")
+        var doubled = positives.map { it -> it *2 } // redundant form
+        var tripled = positives.map { it *3 }
+
+        println("\n Lista de numeros duplicados e triplicados:  ")
+        println("numbers:  $doubled")
+        println("numbers:  $tripled")
 }
 
