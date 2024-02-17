@@ -66,6 +66,11 @@ fun funUtilsCollections(){
         println("\n Lista de numeros duplicados e triplicados:  ")
         println("positives duplicate number:  $doubled")
         println("negatives tripled numbers:  $tripled")
-git
+
+        val anyNegative = numbers.any { it < 0 };
+        val anyGT6 = numbers.any{ it > 6}
+        print("\n numbers:  [$numbers]")
+        println("Is there any number less than 0:  $anyNegative")
+        println("Is there any number greater than 6:  $anyGT6")
 }
 
