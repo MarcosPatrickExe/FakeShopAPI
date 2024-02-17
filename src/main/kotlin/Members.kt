@@ -52,6 +52,13 @@ class MutableStack<E> ( vararg items: E  ){
 
 class Example
 
+
+open class  Tiger(val origin :String){
+     fun roar() = println("Tiger roar sound from: $origin")
+}
+class SiberianTiger( roar:String) : Tiger( origin = roar)
+
+
 class Pokemons<V, PokeTypes> {
 
     private val pokemons :HashMap<V, PokeTypes>;
@@ -68,8 +75,6 @@ class Pokemons<V, PokeTypes> {
            return this.pokemons.iterator()
     }
 }
-
-
 
 
 

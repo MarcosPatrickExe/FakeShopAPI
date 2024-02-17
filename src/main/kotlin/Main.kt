@@ -83,7 +83,7 @@ fun main() {
     println( mutablesByFun);
 
     // OU TBM:
-    val ages: MutableList<Int> = mutableListOf(23, 15, 45, 17, 65, 18, 19, 20);
+    val ages: MutableList<Int> = mutableListOf<Int>( 23, 15, 45, 17, 65, 18, 19, 20 );
     val agesCopy: List<Int> = ages
     ages.add(78)
     ages.add(101)
@@ -154,6 +154,10 @@ fun main() {
     println("\n================= collection util funcs ====================\n");
     funUtilsCollections()
 
+    println("\n================= Polymorphism ====================\n");
+
+    val tiger :Tiger = SiberianTiger( "from malasiaaaaaa")
+    print("Tiger roar: ${tiger.roar()}")
 }
 
 

@@ -25,7 +25,6 @@ fun useColletions(){
 
 
 
-
 // ===================== HASH MAP ===========================
 const val PLAYERS_AND_SCORE :Int = 15
 val PlayersPoints :MutableMap<String, Int> = mutableMapOf(   "John"  to 18,     "Elizabeth" to 27,        "Razor" to 5  )
