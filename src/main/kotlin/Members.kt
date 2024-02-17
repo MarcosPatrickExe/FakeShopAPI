@@ -53,10 +53,15 @@ class MutableStack<E> ( vararg items: E  ){
 class Example
 
 
-open class  Tiger(val origin :String){
-     fun roar() = println("Tiger roar sound from: $origin")
+/// exemplo de polimorfismo
+open class  Tiger(val origin :String, var color: String){
+     fun roar() {
+         println("Tiger roar sound from: $origin with color $color")
+     }
 }
-class SiberianTiger( roar:String) : Tiger( origin = roar)
+class SiberianTiger( roar:String) : Tiger( origin = roar, color= "black")
+// or: class SiberianTiger( roar:String) : Tiger( origin = roar, "black")
+// ===========================
 
 
 class Pokemons<V, PokeTypes> {

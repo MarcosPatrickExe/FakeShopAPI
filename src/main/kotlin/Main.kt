@@ -143,12 +143,12 @@ fun main() {
 
     println("\n================= MAPs ====================\n");
     println("-> Listing initial players'.... \n");
-    geListPlayers();
+    getListPlayers();
 
     println("\n-> Updanting score of the player 'John'.... ");
     updateScore( "John" );
     updateScore( playerId = "Brenda" ); // example using the nomead example
-    geListPlayers();
+    getListPlayers();
 
 
     println("\n================= collection util funcs ====================\n");
@@ -157,7 +157,7 @@ fun main() {
     println("\n================= Polymorphism ====================\n");
 
     val tiger :Tiger = SiberianTiger( "from malasiaaaaaa")
-    print("Tiger roar: ${tiger.roar()}")
+    tiger.roar();
 }
 
 

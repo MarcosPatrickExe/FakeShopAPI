@@ -95,8 +95,9 @@ fun funUtilsCollections(){
     val accessories2 = listOf( "wristwatch", "glasses", "chain", "bracelet" )
     val cart = listOf( accessories, accessories2)
 
-    val normalMap = cart.map { it }
-    val flatMap = cart.flatMap { it }
+    val normalMap : List<List<String>> = cart.map { it }
+    val flatMap :List<String> = cart.flatMap { it }
+
     println("normal map:  $normalMap")
     println("flat map:  $flatMap")
 }

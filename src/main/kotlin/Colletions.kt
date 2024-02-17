@@ -42,7 +42,7 @@ fun updateScore( playerId: String ){
         }
 }
 
-fun geListPlayers(){
+fun getListPlayers(){
     PlayerPointsCopy.forEach{
             (k, v) -> println("player $k points: $v")
     }
