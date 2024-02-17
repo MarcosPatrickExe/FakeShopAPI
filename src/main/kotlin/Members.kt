@@ -9,7 +9,6 @@ data class PersonClothers( var clothes: List<Clothe>, val  amount :Int = 3 )
 data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? )  // automatically generated methods:  equals(), hashCode(), toString() and copy()
 
 open class Person{
-
     private lateinit var isWorking :BooleanArray
     private val name: String
     private var age: Any?
@@ -41,13 +40,9 @@ class MutableStack<E> ( vararg items: E  ){
     private var elements :MutableList<E> = items.toMutableList();
 
     fun push( newElement: E ) = this.elements.add( newElement );
-
     fun peek(): E = this.elements.last();
-
     fun pop(): E = this.elements.removeAt( elements.size-1 );
-
     fun isEmpty() :Boolean = this.elements.isEmpty()
-
     fun getSize() :Int = this.elements.size;
 
     override fun toString(): String {

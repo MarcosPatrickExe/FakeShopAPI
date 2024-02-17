@@ -56,7 +56,7 @@ fun whenAssign( obj :Any) : Any{
       return result
 }
 
-fun max( A: Int, B:Int) = if( A > B)  A else B  // if expession form, as "ternary operator"
+fun maxValue( A: Int, B:Int) = if( A > B)  A else B  // if expession form, as "ternary operator"
 
 
 

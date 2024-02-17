@@ -90,6 +90,12 @@ fun main() {
     println(  "\nNew values addited to 'ages'. See now the values of 'agesCopy' below: ");
 
     agesCopy.forEach {  item -> print("$item, "); }
+    println("Max value: ${
+            maxValue( 
+                    agesCopy.get(index =1 ),
+                    agesCopy.get(2)
+            )
+    } ");
 
     // agesCopy.add()  is forbbiden! The List type é unmutable
 
