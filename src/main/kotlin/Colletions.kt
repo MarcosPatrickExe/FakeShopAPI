@@ -59,9 +59,9 @@ fun funUtilsCollections(){
         println("positives:  $positives")
         println("negatives:  $negatives")
 
-        println("\napplying transformation to values of list with map: ")
+        println("\n\n Applying transformation to values of list with map: ")
         var doubled = positives.map { it -> it *2 } // redundant form
-        var tripled = negatives.map { it *3 }
+        var tripled = negatives.map {  it *3 }
 
         println("\n Lista de numeros duplicados e triplicados:  ")
         println("positives duplicate number:  $doubled")
@@ -73,9 +73,15 @@ fun funUtilsCollections(){
         println("Is there any number less than 0:  $anyNegative")
         println("Is there any number greater than 6:  $anyGT6")
 
-        println("\n using FlatMap that transforms lists items into in iterables:  ")
+        println("\n\n Using FlatMap that transforms lists items into in iterables:  ")
         val accessories = listOf( "shirts", "shoes", "pants", "cap" )
         val accessories2 = listOf( "wristwatch", "glasses", "chain", "bracelet" )
+        val cart = listOf( accessories, accessories2)
+
+        val normalMap = cart.map { it }
+        val flatMap = cart.flatMap { it }
+        println("normal map:  $normalMap")
+        println("flat map:  $flatMap")
 
 }
 
