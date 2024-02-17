@@ -64,7 +64,8 @@ fun funUtilsCollections(){
         var tripled = negatives.map { it *3 }
 
         println("\n Lista de numeros duplicados e triplicados:  ")
-        println("positives doubled:  $doubled")
-        println("negatives numbers:  $tripled")
+        println("positives duplicate number:  $doubled")
+        println("negatives tripled numbers:  $tripled")
+git
 }
 
