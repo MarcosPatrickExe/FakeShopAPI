@@ -32,7 +32,7 @@ val PlayersPoints :MutableMap<String, Int> = mutableMapOf(   "John"  to 18,     
 val PlayerPointsCopy  = PlayersPoints;
 
 fun updateScore( playerId: String ){
-        if(   PlayersPoints.containsKey(playerId)   ){
+        if(   PlayersPoints.containsKey( playerId)   ){
               println( "Updating the ''PlayersPoints'  MapList...." )
               var newScore :Int = PlayersPoints.getValue( playerId ) +PLAYERS_AND_SCORE;
               PlayersPoints[playerId] =  newScore
@@ -72,5 +72,10 @@ fun funUtilsCollections(){
         print("\n numbers:  [$numbers]")
         println("Is there any number less than 0:  $anyNegative")
         println("Is there any number greater than 6:  $anyGT6")
+
+        println("\n using FlatMap that transforms lists items into in iterables:  ")
+        val accessories = listOf( "shirts", "shoes", "pants", "cap" )
+        val accessories2 = listOf( "wristwatch", "glasses", "chain", "bracelet" )
+
 }
 
