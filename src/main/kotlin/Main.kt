@@ -80,11 +80,11 @@ fun main() {
     }
 
     val mutablesByFun = mutableStackOf<String>(   "Eevee", "Flareon", "Vaporeon", "Umbreon", "Joteon",  "Glaceon", "Leafeon"   );
-    println( mutablesByFun );
+    println( mutablesByFun);
 
     // OU TBM:
     val ages: MutableList<Int> = mutableListOf(23, 15, 45, 17, 65, 18, 19, 20);
-    val agesCopy :List<Int> = ages
+    val agesCopy: List<Int> = ages
     ages.add(78)
     ages.add(101)
     println(  "\nNew values addited to 'ages'. See now the values of 'agesCopy' below: ");
