@@ -54,7 +54,7 @@ class Example
 
 
 /// exemplo de polimorfismo
-open class  Tiger(val origin :String, var color: String){
+open class  Tiger( val origin :String, var color: String ){
      fun roar() {
          println("Tiger roar sound from: $origin with color $color")
      }
