@@ -158,6 +158,17 @@ fun main() {
 
     val tiger :Tiger = SiberianTiger( "from malasiaaaaaa")
     tiger.roar();
+
+
+    println("\n\n================= Data class ====================\n");
+
+    var user = User("Chris", 17);
+    var secondUser = User("Chris", 17);
+    var thirdUser = User(name= "Veronica", 10);
+
+    println("data class 'User':  $user");
+    println("user == secondUser: ${user == secondUser}");
+    println("user == thirdUser: ${user == thirdUser}");
 }
 
 

@@ -6,7 +6,10 @@ import Vehicle
 
 data class PersonClothers( var clothes: List<Clothe>, val  amount :Int = 3 )
 
-data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? )  // automatically generated methods:  equals(), hashCode(), toString() and copy()
+data class Clothe( var name :String,  val size :Char,  var color: java.awt.Color? )  // automatically generated implicity methods:  equals(), hashCode(), toString() and copy()
+// os campos declarados nos construtores ja sao automaticamente reconhecidos pelos metodos da classe Object comentados acima.
+
+
 
 open class Person{
     private lateinit var isWorking :BooleanArray
@@ -81,9 +84,11 @@ class Pokemons<V, PokeTypes> {
     }
 }
 
-
-
 /*
     List<out T> in Kotlin is equivalent to List<? extends T> in Java.
     List<in T> in Kotlin is equivalent to List<? super T> in Java
 */
+
+data class User( val name: String, val id: Int ){
+        override fun equals(other: Any?) = other is User && other.id == this.id
+}
