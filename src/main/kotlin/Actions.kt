@@ -103,6 +103,32 @@ fun funUtilsCollections(){
 }
 
 
+fun usingDataClasses(){
+    var user = User("Chris", 17);
+    var secondUser = User("Chris", 17);
+    var thirdUser = User(name= "Veronica", 10);
+
+    println("=> Equals data class 'User':  $user");
+    println("user == secondUser: ${user == secondUser}");  // true
+    println("user == thirdUser: ${user == thirdUser}");     // false
+
+    println("\n=> Hashcode of data class User:   $user")
+    println("user hashcode: "+user.hashCode()) // 2017699962
+    println("second user hashcode: ${secondUser.hashCode()}") // 2017699962
+    println("third user hashcode: ${thirdUser.hashCode()}") // 486777349
+
+    // using the 'copy' for create a different memory reference as new instance of object but with identical properties and values
+    println("\n=> Copy of reference data class User:   $user")
+    println("user copy value: "+user.copy())                                          // { name="Chris",   id: 17 }
+    println("user === user.copy: ${ user == user.copy() }")               // true
+    println("user === user.copy: ${ user === user.copy() }")             // false
+    println("user copy with name:  ${user.copy(name= "Victor")} ")   // { name="Victor",   id: 17 }
+    println("user copy with id: ${user.copy( id= 29) }")                        // { name="Chris",   id: 29 }
+
+    println("user first propertie:  ${user.component1()} ")                   // name= Chris
+    println("user second propertie: ${user.component2() }")               //  id: 20
+}
+
 
 // =============== FORs ======================
 
