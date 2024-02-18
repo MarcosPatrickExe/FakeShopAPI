@@ -166,14 +166,22 @@ fun main() {
     var secondUser = User("Chris", 17);
     var thirdUser = User(name= "Veronica", 10);
 
-    println("Equals data class 'User':  $user");
-    println("user == secondUser: ${user == secondUser}");
-    println("user == thirdUser: ${user == thirdUser}");
+    println("=> Equals data class 'User':  $user");
+    println("user == secondUser: ${user == secondUser}");  // true
+    println("user == thirdUser: ${user == thirdUser}");     // false
 
-    println("\nHashcode of data class User:   $user")
-    println("user hashcode: "+user.hashCode())
-    println("second user hashcode: ${secondUser.hashCode()}")
-    println("thid user hashcode: ${thirdUser.hashCode()}")
+    println("\n=> Hashcode of data class User:   $user")
+    println("user hashcode: "+user.hashCode()) // 2017699962
+    println("second user hashcode: ${secondUser.hashCode()}") // 2017699962
+    println("third user hashcode: ${thirdUser.hashCode()}") // 486777349
+
+    // using the 'copy' for create a different memory reference as new instance of object but with identical properties and values
+    println("\n=> Copy of reference data class User:   $user")
+    println("user copy value: "+user.copy())                                          // { name="Chris",   id: 17 }
+    println("user === user.copy: ${ user === user.copy() }")             // false
+    println("user copy with name:  ${user.copy(name= "Victor")} ")   // { name="Victor",   id: 17 }
+    println("user copy with id: ${user.copy( id= 29) }")                        // { name="Chris",   id: 29 }
+
 }
 
 
