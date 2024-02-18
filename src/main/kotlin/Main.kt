@@ -166,9 +166,14 @@ fun main() {
     var secondUser = User("Chris", 17);
     var thirdUser = User(name= "Veronica", 10);
 
-    println("data class 'User':  $user");
+    println("Equals data class 'User':  $user");
     println("user == secondUser: ${user == secondUser}");
     println("user == thirdUser: ${user == thirdUser}");
+
+    println("\nHashcode of data class User:   $user")
+    println("user hashcode: "+user.hashCode())
+    println("second user hashcode: ${secondUser.hashCode()}")
+    println("thid user hashcode: ${thirdUser.hashCode()}")
 }
 
 

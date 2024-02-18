@@ -43,9 +43,9 @@ fun updateScore( playerId: String ){
 }
 
 fun getListPlayers(){
-    PlayerPointsCopy.forEach{
-            (k, v) -> println("player $k points: $v")
-    }
+        PlayerPointsCopy.forEach{
+                (k, v) -> println("player $k points: $v")
+        }
 }
 
 
