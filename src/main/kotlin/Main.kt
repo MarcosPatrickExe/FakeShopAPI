@@ -166,10 +166,11 @@ fun main() {
 
     println("\n\n================= Enums ====================\n");
     val red :Colors = Colors.RED
-    println( red );
-    println( red.containsRed() );
-    println( Colors.BLUE.containsRed() )
-    println( Colors.YELLOW.containsRed() )
+    println( red );                                                // RED
+    println( red.containsRed() );                       // true
+    println( Colors.BLUE.containsRed() )        // false
+    println( Colors.YELLOW.containsRed() )  // true
+    println( Colors.GREEN.containsRed() )   // false
 }
 
 
