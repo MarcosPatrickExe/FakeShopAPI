@@ -96,11 +96,11 @@ data class User( val name: String, val id: Int ){
 sealed class Mammal( name: String);
 
 class Cat( val catName: String ) : Mammal( name= catName )
-class Human( val humanName :String ): Mammal( humanName )
+class Human( val humanName :String, val job: String ): Mammal( humanName )
 
-fun greetMammal( mammal: Mammal ) :Boolean{
-    return when( mammal ){
-        is Cat -> true
-        is Human -> false
-    }
+fun greetMammal( mammal: Mammal ) :Unit{
+         when( mammal ){
+                is Cat -> println("Hello ${mammal.catName }! ")
+                is Human -> println("Hello ${mammal.humanName}! You're working as a ${mammal.job} ")
+        }
 }

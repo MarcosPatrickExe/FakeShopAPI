@@ -171,6 +171,9 @@ fun main() {
     println( Colors.BLUE.containsRed() )        // false
     println( Colors.YELLOW.containsRed() )  // true
     println( Colors.GREEN.containsRed() )   // false
+
+    println("\n\n================= Sealed classes ====================\n");
+    greetMammal(  Human("Mariana", "worker") );
 }
 
 
