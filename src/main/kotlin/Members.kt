@@ -92,3 +92,15 @@ class Pokemons<V, PokeTypes> {
 data class User( val name: String, val id: Int ){
         override fun equals( other: Any? ) = other is User && other.id == this.id
 }
+
+sealed class Mammal( name: String);
+
+class Cat( val catName: String ) : Mammal( name= catName )
+class Human( val humanName :String ): Mammal( humanName )
+
+fun greetMammal( mammal: Mammal ) :Boolean{
+    return when( mammal ){
+        is Cat -> true
+        is Human -> false
+    }
+}

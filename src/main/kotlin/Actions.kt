@@ -109,7 +109,7 @@ fun usingDataClasses(){
     var thirdUser = User(name= "Veronica", 10);
 
     println("=> Equals data class 'User':  $user");
-    println("user == secondUser: ${user == secondUser}");  // true
+    println("user == secondUser: ${user == secondUser}");  // true ( using equals() method overred implicity )
     println("user == thirdUser: ${user == thirdUser}");     // false
 
     println("\n=> Hashcode of data class User:   $user")
