@@ -172,8 +172,11 @@ fun main() {
     println( Colors.YELLOW.containsRed() )  // true
     println( Colors.GREEN.containsRed() )   // false
 
+
     println("\n\n================= Sealed classes ====================\n");
-    greetMammal(  Human("Mariana", "worker") );
+    val cat :Mammal =  Cat("Sebastian" )
+    greetMammal(  Human("Mariana", "worker") as Mammal );
+    greetMammal(  cat as Mammal );
 }
 
 
