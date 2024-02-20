@@ -93,7 +93,7 @@ data class User( val name: String, val id: Int ){
         override fun equals( other: Any? ) = other is User && other.id == this.id
 }
 
-sealed class Mammal( name: String);
+sealed class Mammal( name: String); // A sealed class only maybe extended by subclasses when are the same package
 
 class Cat( val catName: String ) : Mammal( name= catName )
 class Human( val humanName :String, val job: String ): Mammal( humanName )
