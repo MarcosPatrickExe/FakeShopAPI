@@ -147,17 +147,16 @@ fun rentPriceWithObjectExpression( standard: Int, festivityDays: Int, specialDay
 }
 
 
-
-
-object Player{
+object Player{ // declaring a object with singleton pattern
     fun takeParams( username: String, password: String){
          println("the player '$username' has been login with password '$password''");
     }
 }
 fun useObjectDeclaration(){
     Player.takeParams("player tauz", "rap_Geek_123")
+    // using a object Player as a singleton object pattern
 
-    // using anonymous class to implements AirPlaine 'Fly()' method
+    // using object for create a anonymous class to implements AirPlaine 'Fly()' method
     var plane = ( object : AirPlaine{
         override fun fly() {
             println(" Airplane flying.....")
@@ -165,7 +164,7 @@ fun useObjectDeclaration(){
     })
     plane.fly()
 
-    // using lambda expression to subscribe the abstract method 'goToBacking'
+    // using lambda expression to override the abstract method 'goToBacking' of interface 'Car'
     var car = Vehicle.Car {
         println(" Car going to back.....")
     }
