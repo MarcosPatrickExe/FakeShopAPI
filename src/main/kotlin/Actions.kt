@@ -130,7 +130,7 @@ fun usingDataClasses(){
 }
 
 
-fun rentPrice( standard: Int, festivityDays: Int, specialDays : Int) : Unit{
+fun rentPriceWithObjectExpression( standard: Int, festivityDays: Int, specialDays : Int) : Unit{
 
     val dayRates = object {
           var standard: Int? = null
