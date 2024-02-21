@@ -16,37 +16,6 @@ fun main() {
                            1
    );
 
-
-    // using anonymous class to implements AirPlaine 'Fly()' method
-    var plane = ( object : AirPlaine{
-            override fun fly() {
-                 println(" Airplane flying.....")
-            }
-    })
-    plane.fly()
-
-    // using lambda expression to subscribe the abstract method 'goToBacking'
-    var car = Vehicle.Car {
-            println(" Car going to back.....")
-    }
-    car.goToBacking();
-
-
-    // overriding two methods of super interface Vehicles
-    var genericVehicle = ( object: Vehicle {
-            override fun accelerate(   acceleration :Int  ) :Unit {
-                   println(" Airplane flying.....")
-            }
-
-            final override fun speed(   speed :Int  ) :String {  //  prohibit re-overriding
-                   println(" Airplane flying.....")
-                   return  speed.toString()
-            }
-    })
-    genericVehicle.accelerate( 12);
-    genericVehicle.speed(27)
-
-
      //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
     // to see how IntelliJ IDEA suggests fixing it.
     println("Hello,  "+pessoa.getName(  null ) + "!    \n")
@@ -181,6 +150,8 @@ fun main() {
 
     println("\n\n================= Object keyword ====================\n");
     rentPriceWithObjectExpression( 10, festivityDays = 2, 1);
+    useObjectDeclaration();
+
 }
 
 

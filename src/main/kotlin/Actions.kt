@@ -1,4 +1,6 @@
 package org.example
+import Vehicle
+import Vehicle.*
 
 // ======  FILE FOR DECLARATION OF FUNCTIONS  =========
 
@@ -143,6 +145,54 @@ fun rentPriceWithObjectExpression( standard: Int, festivityDays: Int, specialDay
 
     println("total price is: $total");
 }
+
+
+
+
+object Player{
+    fun takeParams( username: String, password: String){
+         println("the player '$username' has been login with password '$password''");
+    }
+}
+fun useObjectDeclaration(){
+    Player.takeParams("player tauz", "rap_Geek_123")
+
+    // using anonymous class to implements AirPlaine 'Fly()' method
+    var plane = ( object : AirPlaine{
+        override fun fly() {
+            println(" Airplane flying.....")
+        }
+    })
+    plane.fly()
+
+    // using lambda expression to subscribe the abstract method 'goToBacking'
+    var car = Vehicle.Car {
+        println(" Car going to back.....")
+    }
+    car.goToBacking();
+
+
+    // overriding two methods of super interface Vehicles
+    var genericVehicle = ( object: Vehicle {
+        override fun accelerate(   acceleration :Int  ) :Unit {
+            println(" Airplane flying.....")
+        }
+
+        final override fun speed(   speed :Int  ) :String {  //  prohibit re-overriding
+            println(" Airplane flying.....")
+            return  speed.toString()
+        }
+    })
+    genericVehicle.accelerate( 12);
+    genericVehicle.speed(27)
+}
+
+
+
+
+
+
+
 
 // =============== FORs ======================
 
