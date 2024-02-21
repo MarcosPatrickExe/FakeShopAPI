@@ -173,7 +173,7 @@ fun useObjectDeclaration(){
 
 
     // overriding two methods of super interface Vehicles
-    var genericVehicle = ( object: Vehicle {
+    var genericVehicle = ( object: Vehicle  {
         override fun accelerate(   acceleration :Int  ) :Unit {
             println(" Airplane flying.....")
         }
