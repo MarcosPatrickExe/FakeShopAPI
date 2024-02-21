@@ -177,6 +177,11 @@ fun main() {
     val cat :Mammal =  Cat("Sebastian" )
     greetMammal(  Human("Mariana", "worker") as Mammal );
     greetMammal(  cat as Mammal );
+
+
+    println("\n\n================= Object keyword ====================\n");
+    rentPrice( 10, 2, 1);
+
 }
 
 

@@ -120,15 +120,29 @@ fun usingDataClasses(){
     // using the 'copy' for create a different memory reference as new instance of object but with identical properties and values
     println("\n=> Copy of reference data class User:   $user")
     println("user copy value: "+user.copy())                                          // { name="Chris",   id: 17 }
-    println("user === user.copy: ${ user == user.copy() }")               // true
-    println("user === user.copy: ${ user === user.copy() }")             // false
-    println("user copy with name:  ${user.copy(name= "Victor")} ")   // { name="Victor",   id: 17 }
-    println("user copy with id: ${user.copy( id= 29) }")                        // { name="Chris",   id: 29 }
+    println("user === user.copy: ${user == user.copy()}")               // true
+    println("user === user.copy: ${user === user.copy()}")             // false
+    println("user copy with name:  ${user.copy(name = "Victor")} ")   // { name="Victor",   id: 17 }
+    println("user copy with id: ${user.copy(id = 29)}")                        // { name="Chris",   id: 29 }
 
     println("user first propertie:  ${user.component1()} ")                   // name= Chris
     println("user second propertie: ${user.component2() }")               //  id: 20
 }
 
+
+fun rentPrice( standard: Int, festivityDays: Int, specialDays : Int) : Unit{
+
+    val dayRates = object {
+          var standard: Int? = null
+          var festivity: Int = 50 * festivityDays
+          var special: Int = 100 * specialDays
+          val example :Boolean? = null
+    }
+
+    val total = ((dayRates.standard ?: 0) + dayRates.festivity + dayRates.special );
+
+    println("total price is: $total");
+}
 
 // =============== FORs ======================
 
