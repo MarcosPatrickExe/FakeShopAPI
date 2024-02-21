@@ -180,7 +180,7 @@ fun main() {
 
 
     println("\n\n================= Object keyword ====================\n");
-    rentPrice( 10, 2, 1);
+    rentPrice( 10, festivityDays = 2, 1);
 
 }
 
