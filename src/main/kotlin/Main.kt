@@ -158,14 +158,14 @@ fun main() {
 
     val empty = "text".let {
             value -> println( value.toLowerCase());
-            value.isEmpty();
+            value.isEmpty();// always the last instruction line will be returned to variable!
     }
     // OR
     val empty2 = "text".let {
            println(it)
-           it.isEmpty()
+           it.isEmpty()// always the last instruction line will be returned to variable!
     }
-
+    println("empty is $empty  //  empty2 is $empty2");  // empty is false // empty2 is false
 
 }
 
