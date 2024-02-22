@@ -152,6 +152,21 @@ fun main() {
     rentPriceWithObjectExpression( 10, festivityDays = 2, 1);
     useObjectDeclaration();
     Tiger.toHunt();
+
+    println("\n\n================= Let, Run, With, Apply, Also funcs ====================\n");
+    println("using Let function: ");
+
+    val empty = "text".let {
+            value -> println( value.toLowerCase());
+            value.isEmpty();
+    }
+    // OR
+    val empty2 = "text".let {
+           println(it)
+           it.isEmpty()
+    }
+
+
 }
 
 
