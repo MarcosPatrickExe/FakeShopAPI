@@ -151,6 +151,7 @@ fun main() {
     println("\n\n================= Object keyword ====================\n");
     rentPriceWithObjectExpression( 10, festivityDays = 2, 1);
     useObjectDeclaration();
+    Tiger.toHunt();
 }
 
 
