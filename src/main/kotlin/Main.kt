@@ -156,12 +156,12 @@ fun main() {
     println("\n\n================= Let, Run, With, Apply, Also funcs ====================\n");
     println("using Let function: ");
 
-    val empty = "text".let {
+    val empty = "example text".let {
             value -> println( value.toLowerCase());
             value.isEmpty();// always the last instruction line will be returned to variable!
     }
     // OR
-    val empty2 = "text".let {
+    val empty2 = "any word here".let {
            println(it)
            it.isEmpty()// always the last instruction line will be returned to variable!
     }
