@@ -65,7 +65,7 @@ open class  Tiger( val origin :String, var color: String ){
     companion object { // creating a anonymous internal class
             private var color :Colors = Colors.ORANGE;
             fun toHunt(){ // method of the class and not of the instance!
-                  print("tiger is to hunting! Tiger color is ${this.color}")
+                  print("tiger is to hunting! Tiger color is ${this.color} \n")
             }
     }
 }
