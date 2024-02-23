@@ -167,8 +167,13 @@ fun main() {
     }
     println("empty is $empty  //  empty2 is $empty2");  // empty is false // empty2 is false
 
-    empty2?.let{
+    empty2?.let{// execute this code escope when value not be a null
+         firstParameter ->
          println("show this message when empty2 not be a null value! ");
+
+         empty.let{
+
+         }
     }
 }
 
