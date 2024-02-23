@@ -167,6 +167,9 @@ fun main() {
     }
     println("empty is $empty  //  empty2 is $empty2");  // empty is false // empty2 is false
 
+    empty2?.let{
+         println("show this message when empty2 not be a null value! ");
+    }
 }
 
 
