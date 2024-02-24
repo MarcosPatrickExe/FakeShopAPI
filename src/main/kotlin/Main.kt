@@ -171,10 +171,16 @@ fun main() {
          firstParameter ->
          empty.let{
                secondParameter  -> println("show this message when empty2, or '$firstParameter', not be a " +
-                                                               "null value e '$secondParameter' might be a null or a " +
+                                                               "null value and '$secondParameter' might be a null or a " +
                                                                "anyway value  ");
          }
     }
+
+    println("using Run function: ");
+    // differently of the Let, the Run() contains a 'this' reference to object referenced instead the "it" variable.
+    // The "this" refers to the object that is calling the rui(), as: objectName.run()
+
+
 }
 
 
