@@ -107,7 +107,7 @@ fun funUtilsCollections(){
 
 fun usingDataClasses(){
     var user = User("Chris", 17);
-    var secondUser = User("Chris", 17);
+    var secondUser = User("Chris",  id=17);
     var thirdUser = User(name= "Veronica", 10);
 
     println("=> Equals data class 'User':  $user");

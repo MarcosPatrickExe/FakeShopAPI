@@ -176,16 +176,40 @@ fun main() {
     }
 
     println("\n [ USING Run FUNCTION: ] ");
-    // differently of the Let, the Run() contains a 'this' reference to object referenced instead the "it" variable.
-    // The "this" refers to the object that is calling the rui(), as: objectName.run()
+    // differently of the Let, the Run() contains a 'this' reference to object that was referenced
+    // instead the "it" variable. The "this" refers to the object that is calling the run(), as: objectName.run()
 
-    val usr :User? =  User(name=" Alex", 29);
+    val userrr :User? =  User(name=" Alex", 29);
 
-    var nameOfUserLength = usr?.run {                                               // without 'this'
+    var nameOfUserLength = userrr?.run {                                               // without 'this'
           println("the name of user is ${this.name} and ID is '${id}'");
           name.length
     } ?: 0  // using the elvis operator to return 0 if 'usr' is null
     println("\n name user received from run() return: $nameOfUserLength ");
+
+
+    println("\n [ USING With FUNCTION: ] ");
+
+    val playerTwo :User =  User(name=" Tauz", 104);
+    with(  playerTwo ){
+           println("accessing by a fun With() the player '$name' and his ID equals '$id' ");
+    }
+
+    // alternative:
+    playerTwo.run{
+        println("accessing by a fun Run() the player name that is '$name' and his ID equals '$id' ");
+    }
+    // instead of println("....... ${playerTwo.name} ....... ${playerTwo.id} ");
+
+
+    println("\n [ USING Apply FUNCTION: ] ");
+    // apply allows change the properties of object
+
+    playerTwo.apply { // apply() requires that constructor properties must be declared with 'var' instead 'val'
+           name= "Jake"
+           id=182
+    } // .toString()
+    println("now, using 'Apply()' func, player name is ${playerTwo.name} and ID is: '${playerTwo.id}' ");
 
 
 }

@@ -96,7 +96,7 @@ class Pokemons<V, PokeTypes> {
     List<in T> in Kotlin is equivalent to List<? super T> in Java
 */
 
-data class User( val name: String, val id: Int ){
+data class User( var name: String, var id: Int ){
         override fun equals( other: Any? ) = other is User && other.id == this.id
 }
 
@@ -110,4 +110,12 @@ fun greetMammal( mammal: Mammal ) :Unit{
                 is Cat -> println("Hello ${ mammal.name }! ")
                 is Human -> println("Hello ${mammal.name}! You're working as a ${mammal.job} ")
         }
+}
+
+
+data class  Machine  <D>( var name :String, var dimensions: Any?,  var powerWatts :Int  ){
+                                        // every Data Classes requires a primary constructor as above
+
+    constructor() : this( "", dimensions=  listOf(0, 0, 0), 20 )
+    //  overload of the constructor class
 }
