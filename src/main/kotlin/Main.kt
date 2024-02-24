@@ -152,8 +152,8 @@ fun main() {
     useObjectDeclaration();
     Tiger.toHunt();
 
-    println("\n\n================= Let, Run, With, Apply, Also funcs ====================\n");
-    println("using Let function: ");
+    println("\n\n======== Funções de Escopo (Let, Run, With, Apply, Also funcs ) ============\n");
+    println(" [ USING Let FUNCTION:  ] ");
 
     val empty = "example text".let {
             value -> println( value.toLowerCase());
@@ -175,17 +175,18 @@ fun main() {
          }
     }
 
-    println("\n USING Run FUNCTION: ");
+    println("\n [ USING Run FUNCTION: ] ");
     // differently of the Let, the Run() contains a 'this' reference to object referenced instead the "it" variable.
     // The "this" refers to the object that is calling the rui(), as: objectName.run()
 
     val usr :User? =  User(name=" Alex", 29);
 
-    var nameOfUser = usr?.run {                                               // without 'this'
+    var nameOfUserLength = usr?.run {                                               // without 'this'
           println("the name of user is ${this.name} and ID is '${id}'");
-          name
-    }
-    println("\n name user received from run() return: $nameOfUser ");
+          name.length
+    } ?: 0  // using the elvis operator to return 0 if 'usr' is null
+    println("\n name user received from run() return: $nameOfUserLength ");
+
 
 }
 
