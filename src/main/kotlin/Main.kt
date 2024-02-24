@@ -6,8 +6,8 @@ import java.awt.Color;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    var pessoa =  Person( "ferdinando", 19  );
+    val namee = "Kotlin"
+    var pessoa =  Person( "ferdinando",  ageReceived =19  );
     var  clothes =  PersonClothers(
                                          listOf<Clothe>(
                                                  Clothe("t-shirt", 'M', null),
@@ -32,7 +32,6 @@ fun main() {
     }
 
     println("\n ============== varargs ==================== \n");
-
     vargars();
 
 
@@ -176,10 +175,17 @@ fun main() {
          }
     }
 
-    println("using Run function: ");
+    println("\n USING Run FUNCTION: ");
     // differently of the Let, the Run() contains a 'this' reference to object referenced instead the "it" variable.
     // The "this" refers to the object that is calling the rui(), as: objectName.run()
 
+    val usr :User? =  User(name=" Alex", 29);
+
+    var nameOfUser = usr?.run {                                               // without 'this'
+          println("the name of user is ${this.name} and ID is '${id}'");
+          name
+    }
+    println("\n name user received from run() return: $nameOfUser ");
 
 }
 

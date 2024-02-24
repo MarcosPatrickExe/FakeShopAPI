@@ -59,7 +59,7 @@ class Example
 /// exemplo de polimorfismo
 open class  Tiger( val origin :String, var color: String ){
      fun roar() {
-         println("Tiger roar sound from: $origin with color $color")
+          println("Tiger roar sound from: $origin with color $color")
      }
 
     companion object { // creating a anonymous internal class
