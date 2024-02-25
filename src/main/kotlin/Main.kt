@@ -235,9 +235,9 @@ fun main() {
           it.writeCreationlog( obj = it ) // sending the recently Machine() instance created
     }
 
-
     println("\n\n======== Infix functions ============\n");
     InfixFunctions();
+
 }
 
 

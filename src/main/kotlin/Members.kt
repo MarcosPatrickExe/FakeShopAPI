@@ -97,7 +97,14 @@ class Pokemons<V, PokeTypes> {
 */
 
 data class User( var name: String, var id: Int ){
-        override fun equals( other: Any? ) = other is User && other.id == this.id
+    private val likedPeople = mutableListOf<User>(  )
+
+    override fun equals( other: Any? ) = other is User && other.id == this.id
+
+    infix fun liked( other: User) {
+         this.likedPeople.add( other )
+         println("${this.name} liked ${other.name}");
+    }
 }
 
 sealed class Mammal( var name: String ); // A sealed class only can be extended by subclasses when are the same package
@@ -116,12 +123,12 @@ fun greetMammal( mammal: Mammal ) :Unit{
 data class  Machine ( var name :String, var dimensions: Any?,  var powerWatts : Int, var id : Long ){
                                         // every Data Classes requires a primary constructor as above
 
-    constructor() :  this( "", dimensions =  listOf<Int>(0, 0, 0), 0, 0  )
+    constructor() :  this("", dimensions =  listOf<Int>(0, 0, 0), 0, 0  ) // default values on instance
+    //  overload of the constructor class
 
     fun checkIdMachine(): Boolean = ( this.id > 1000 )
 
     fun writeCreationlog( obj :Machine ){
         println("this instance declared machine '${obj.name}' now!");
     }
-    //  overload of the constructor class
 }

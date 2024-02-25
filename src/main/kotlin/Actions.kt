@@ -80,7 +80,7 @@ fun funUtilsCollections(){
 
     println("\n\n Applying transformation to values of list with map: ")
     var doubled = positives.map { it -> it *2 } // redundant form
-    var tripled = negatives.map {  it *3 } //
+    var tripled = negatives.map {  it *3 } // indicated use
 
     println("\n Lista de numeros duplicados e triplicados:  ")
     println("positives duplicate number:  $doubled")
@@ -122,7 +122,7 @@ fun usingDataClasses(){
     // using the 'copy' for create a different memory reference as new instance of object but with identical properties and values
     println("\n=> Copy of reference data class User:   $user")
     println("user copy value: "+user.copy())                                          // { name="Chris",   id: 17 }
-    println("user === user.copy: ${user == user.copy()}")               // true
+    println("user == user.copy: ${user == user.copy()}")               // true
     println("user === user.copy: ${user === user.copy()}")             // false
     println("user copy with name:  ${user.copy(name = "Victor")} ")   // { name="Victor",   id: 17 }
     println("user copy with id: ${user.copy(id = 29)}")                        // { name="Chris",   id: 29 }
@@ -187,16 +187,27 @@ fun useObjectDeclaration(){
 }
 
 
-
+//================== Functions Types =====================
 fun InfixFunctions(){
 
-    infix fun Int.times( str: String) = str.repeat(this)
+    infix fun Int.times( str: String) = str.repeat(this) // this is the first number before 'times'
     println("using the infix function:   5 times 'Bye'   ");
     println(5 times "Bye");
 
     // the infix function native of Kotlin is the 'to' that creates a Pair object implicitly
     val pair = "Ferrari" to "Katrina"
-    println("infix 'to' to generate a Pair object:  $pair")
+    println("\ninfix 'to' to generate a Pair object:  $pair")
+
+    // example of how 'to' works
+    infix fun String.onto( secondString :String ) = Pair(this, secondString ) // this is the first String
+    var keyVal = "McLaren" onto "Lucas"
+    println("\nvalue of 'McLaren onto Lucas':   $keyVal")
+
+    val sophia = User("Sophia", id= 17)
+    val claudia = User( name = "claudia", 20)
+
+    // using a infix functions with Custom objects:
+    sophia liked claudia
 }
 
 
