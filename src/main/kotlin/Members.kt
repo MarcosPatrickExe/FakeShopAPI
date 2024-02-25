@@ -113,9 +113,11 @@ fun greetMammal( mammal: Mammal ) :Unit{
 }
 
 
-data class  Machine  <D>( var name :String, var dimensions: Any?,  var powerWatts :Int  ){
+data class  Machine ( var name :String, var dimensions: Any?,  var powerWatts : Int, var id : Long ){
                                         // every Data Classes requires a primary constructor as above
 
-    constructor() : this( "", dimensions=  listOf(0, 0, 0), 20 )
+    constructor() :  this( "", dimensions =  listOf<Int>(0, 0, 0), 0, 0  )
+
+    fun checkIdMachine(): Boolean = ( this.id > 1000 )
     //  overload of the constructor class
 }

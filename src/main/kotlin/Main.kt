@@ -190,14 +190,14 @@ fun main() {
 
     println("\n [ USING With FUNCTION: ] ");
 
-    val playerTwo :User =  User(name=" Tauz", 104);
-    with(  playerTwo ){
-           println("accessing by a fun With() the player '$name' and his ID equals '$id' ");
+    val machine :Machine =  Machine( name="Automotive robot", listOf(10, 10, 2), 30, id = 32332L );
+    with(  machine ){
+           println("accessing by a fun With() the machine '$name' , his ID is equals '$id' and power is $powerWatts ");
     }
 
     // alternative:
-    playerTwo.run{
-        println("accessing by a fun Run() the player name that is '$name' and his ID equals '$id' ");
+    machine.run{
+        println("accessing by a fun Run() the machine '$name' , his ID is equals '$id' and power is $powerWatts \" ");
     }
     // instead of println("....... ${playerTwo.name} ....... ${playerTwo.id} ");
 
@@ -205,12 +205,26 @@ fun main() {
     println("\n [ USING Apply FUNCTION: ] ");
     // apply allows change the properties of object
 
-    playerTwo.apply { // apply() requires that constructor properties must be declared with 'var' instead 'val'
-           name= "Jake"
-           id=182
-    } // .toString()
-    println("now, using 'Apply()' func, player name is ${playerTwo.name} and ID is: '${playerTwo.id}' ");
+    var machine2 = Machine();
 
+    var idChecked = machine2.apply { // apply() requires that constructor properties must be declared with 'var' instead 'val'
+           name= "Jake"
+           dimensions = listOf(23, 213, 89 )
+           id=182
+           powerWatts = 300
+    }.checkIdMachine()   // calling method of class 'Machine'
+
+    println( "now, using 'Apply()' func, machine name is ${machine.name}, ID: '${machine.id}', " +
+                "powerWatts: ${machine.powerWatts} and dimensions: ${machine.dimensions}");
+
+    machine2.let {
+            machineReference -> idChecked.let{
+                    if ( it == true)
+                         println("ID of machine ${machineReference.name} is so high")
+                    else
+                          println("ID of machine ${machineReference.name} is so low")
+             }
+    }
 
 }
 
