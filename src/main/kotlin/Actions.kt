@@ -191,8 +191,12 @@ fun useObjectDeclaration(){
 fun InfixFunctions(){
 
     infix fun Int.times( str: String) = str.repeat(this)
+    println("using the infix function:   5 times 'Bye'   ");
     println(5 times "Bye");
 
+    // the infix function native of Kotlin is the 'to' that creates a Pair object implicitly
+    val pair = "Ferrari" to "Katrina"
+    println("infix 'to' to generate a Pair object:  $pair")
 }
 
 
