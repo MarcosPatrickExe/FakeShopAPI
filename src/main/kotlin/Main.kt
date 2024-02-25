@@ -152,6 +152,7 @@ fun main() {
     useObjectDeclaration();
     Tiger.toHunt();
 
+
     println("\n\n======== Funções de Escopo (Let, Run, With, Apply, Also funcs ) ============\n");
     println(" [ USING Let FUNCTION:  ] ");
 
@@ -233,6 +234,10 @@ fun main() {
     var newMachine = Machine( name= "Chappie", null, 2000,  id = 238238).also {
           it.writeCreationlog( obj = it ) // sending the recently Machine() instance created
     }
+
+
+    println("\n\n======== Infix functions ============\n");
+    InfixFunctions();
 }
 
 

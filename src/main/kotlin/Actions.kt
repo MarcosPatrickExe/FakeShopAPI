@@ -188,6 +188,12 @@ fun useObjectDeclaration(){
 
 
 
+fun InfixFunctions(){
+
+    infix fun Int.times( str: String) = str.repeat(this)
+    println(5 times "Bye");
+
+}
 
 
 
