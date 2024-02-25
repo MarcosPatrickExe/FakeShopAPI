@@ -207,10 +207,10 @@ fun main() {
 
     var machine2 = Machine();
 
-    var idChecked = machine2.apply { // apply() requires that constructor properties must be declared with 'var' instead 'val'
+    var idChecked :Boolean = machine2.apply { // apply() requires that constructor properties must be declared with 'var' instead 'val'
            name= "Jake"
            dimensions = listOf(23, 213, 89 )
-           id=182
+           this.id=182  // also you can be use 'this' too
            powerWatts = 300
     }.checkIdMachine()   // calling method of class 'Machine'
 
@@ -226,6 +226,13 @@ fun main() {
              }
     }
 
+    println("\n [ USING Also FUNCTION: ] ");
+    // this fun Also() looks Let() fun with 'it' variable already declared implicitly,
+    //  but it returns a object reference as Apply() function to do a additional action
+
+    Machine( ).also {
+          it.writeCreationlog( obj = it ) // sending the recently Machine() instance created
+    }
 }
 
 
