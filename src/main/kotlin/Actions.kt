@@ -190,24 +190,36 @@ fun useObjectDeclaration(){
 //================== Functions Types =====================
 fun InfixFunctions(){
 
-    infix fun Int.times( str: String) = str.repeat(this) // this is the first number before 'times'
-    println("using the infix function:   5 times 'Bye'   ");
-    println(5 times "Bye");
+    infix fun Int.timesOf( str: String) = str.repeat(this) // this is the first number before 'times'
+    println("  using the infix function:   5 times 'Bye'   ");
+    println("  "+(5 timesOf "Bye"));
 
     // the infix function native of Kotlin is the 'to' that creates a Pair object implicitly
     val pair = "Ferrari" to "Katrina"
-    println("\ninfix 'to' to generate a Pair object:  $pair")
+    println("\n  infix 'to' to generate a Pair object:  $pair")
 
     // example of how 'to' works
     infix fun String.onto( secondString :String ) = Pair(this, secondString ) // this is the first String
     var keyVal = "McLaren" onto "Lucas"
-    println("\nvalue of 'McLaren onto Lucas':   $keyVal")
+    println("\n  value of 'McLaren onto Lucas':   $keyVal")
 
     val sophia = User("Sophia", id= 17)
     val claudia = User( name = "claudia", 20)
 
     // using a infix functions with Custom objects:
     sophia liked claudia
+
+
+    println("\n\n======== Operator functions ============\n");
+
+                            // 'times' represents the operator '*'
+    operator fun Int.times(  word: String ) = word.repeat( this )
+    println("  using operator fun to:  2 * Bye   =>  ${  2 * "Bye"  }");
+
+                  // 'get' represents the operator '[...]'
+    operator fun String.get( range: IntRange ) = this.substring( range)
+    val str = "Always forgive your elements; nothing annoys them so much! "
+    println("\n  using operator fun to str[0..14]  => ${ str[0..14] }");
 }
 
 

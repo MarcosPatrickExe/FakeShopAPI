@@ -103,7 +103,7 @@ data class User( var name: String, var id: Int ){
 
     infix fun liked( other: User) {
          this.likedPeople.add( other )
-         println("${this.name} liked ${other.name}");
+         println("  ${this.name} liked ${other.name}");
     }
 }
 

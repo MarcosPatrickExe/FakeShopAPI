@@ -34,7 +34,6 @@ fun main() {
     println("\n ============== varargs ==================== \n");
     vargars();
 
-
     println("\n \n ============== Generics ==================== \n");
 
     var myStack  = MutableStack<String>(  "Empoleon", "Pinsir", "Infernape", "Torterra", "Drapion",  "Murkrow", "Honchkrow", "Excadrill", "Gabite" );
@@ -237,6 +236,7 @@ fun main() {
 
     println("\n\n======== Infix functions ============\n");
     InfixFunctions();
+
 
 }
 
