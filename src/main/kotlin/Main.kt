@@ -184,7 +184,7 @@ fun main() {
 
     var nameOfUserLength = userrr?.run {                                               // without 'this'
           println("the name of user is ${this.name} and ID is '${id}'");
-          name.length
+          this.name.length
     } ?: 0  // using the elvis operator to return 0 if 'usr' is null
     println("\n name user received from run() return: $nameOfUserLength ");
 
@@ -241,9 +241,15 @@ fun main() {
 
 
     println("\n\n======== High-Order functions ============\n");
-    highOrdeFunctions()
+    highOrdeFunctionsAsParameter()
+
+    val funReturned : (Double) -> Long = highOrderFunctionsAsReturn() // Getting the function from 'highOrderFunctionsAsReturn( )'
+    println("\n  value of de fun 'funReturned()'  sending the 27.5 as parameter " +
+               "and it square is  =>\n  ${funReturned( 27.5 )}");
 
 
+    println("\n\n======== Lambda functions ============\n");
+    lambdaFunExamples();
 }
 
 

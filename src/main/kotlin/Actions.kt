@@ -225,11 +225,11 @@ fun InfixFunctions(){
 
 
 //===================== High Order Funcs =======================
-fun templateFunc( X:List<Int>,  Y: List<Int>, sumTotal: ( List<Int>, List<Int>) ->  Int ): String   {
-      return  sumTotal( X , Y).toString();
+fun templateFunc( X:List<Int>,  Y: List<Int>, scalarProduct: ( List<Int>, List<Int>) ->  Int ): String   {
+      return  scalarProduct( X , Y).toString();
 }
 
-fun highOrdeFunctions( ){
+fun highOrdeFunctionsAsParameter( ){
     val vetorA = listOf( 3,  -5);
     val vetorB = listOf( -20 , 35 )
 
@@ -244,11 +244,43 @@ fun highOrdeFunctions( ){
     }
     // or using func dynamic declaration
     println("  alternative result a(3) * b(-20):   $result2 ");
-
-
 }
 
 
+fun highOrderFunctionsAsReturn() : (Double) -> Long {
+
+    // declaring a function
+    fun square( n1:Double ) = (n1 * n1).toLong() // OR:   fun square( n1:Double ): Long {  return (n1 * n1).toLong()  }
+
+    // returning the func reference
+    return ::square // returning a function "square() "
+}
+
+
+fun lambdaFunExamples(){
+
+             // typing the lambda func
+    val upperCase1: (String) -> String = { str: String -> str.uppercase()  }
+
+              // no typing the lambda with inferred of type parameter
+    val upperCase2: (String) -> String = { str -> str.uppercase()  } // erternal inference
+
+             // typing the lambda with inferred return type
+    val upperCase3 = { str :String -> str.uppercase()  } // internal inference
+
+            // using 'it' reference to only ONE parameter function:
+    val upperCase4 :(String) -> String = { it.uppercase() }
+
+          // adding the uppercase function reference directly to variable
+    val upperCase5 :(String) -> String = String::uppercase
+
+
+    println(" ${upperCase1("type word in uppercase! ")}  \n" +
+                " ${upperCase2("type word in uppercase! ")}  \n" +
+                " ${upperCase3("type word in uppercase! ")}  \n" +
+                " ${upperCase4("type word in uppercase! ")}  \n" +
+                " ${upperCase5("type word in uppercase! ")}  \n");
+}
 
 
 // =============== FORs ======================
