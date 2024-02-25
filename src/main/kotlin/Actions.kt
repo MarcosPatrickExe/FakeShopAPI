@@ -224,11 +224,29 @@ fun InfixFunctions(){
 
 
 
-//================== High Order Funcs =====================
-fun highOrdeFunctions( X:List<Int>,  Y: List<Int>, sumTotal: ( List<Int>, List<Int>) ->  Int ): String   {
+//===================== High Order Funcs =======================
+fun templateFunc( X:List<Int>,  Y: List<Int>, sumTotal: ( List<Int>, List<Int>) ->  Int ): String   {
       return  sumTotal( X , Y).toString();
 }
 
+fun highOrdeFunctions( ){
+    val vetorA = listOf( 3,  -5);
+    val vetorB = listOf( -20 , 35 )
+
+    fun funScalarProduct( a : List<Int>, b: List<Int> ) =  (a[0] * b[0])  +  (a[1] * b[1])
+
+    var result = templateFunc( X= vetorA , Y= vetorB, ::funScalarProduct   ); // sending a callback function with ::
+    println("  the Scalar product between a( 3, -5)  and   b( -20, 35) is:  $result")
+
+    // alternative 2:  replacing the callback function
+    var result2 = templateFunc( vetorA , vetorB) {
+            a:List<Int>, b:List<Int>    ->    a[0]*b[0]    //  ( a, b) -> a[0] * b[0]
+    }
+    // or using func dynamic declaration
+    println("  alternative result a(3) * b(-20):   $result2 ");
+
+
+}
 
 
 
