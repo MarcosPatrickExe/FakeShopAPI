@@ -280,6 +280,8 @@ fun main() {
 
     println("======== Extension functions ============\n");
     extensionsFunctions()
+
+    extensionsFunctionsGenerics();
 }
 
 

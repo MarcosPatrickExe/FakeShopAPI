@@ -330,6 +330,23 @@ fun extensionsFunctions(){
 
 
 
+//=============== Extension Funcs Generics=======================
+
+fun extensionsFunctionsGenerics(){
+
+    println("\n   Extension Functions Generics: ");
+      fun  <T> T?.nullSafeToString() = this?.toString() ?: "Absence of value because is NULL"
+      var isNull = null.nullSafeToString()
+      println(" 'null.nullSafeToString' =>  $isNull")
+      println(" 'kotlin.nullSafeToString' =>  ${ "Kotlin".nullSafeToString() }")
+}
+
+
+
+
+
+
+
 
 
 // =============== FORs ======================
