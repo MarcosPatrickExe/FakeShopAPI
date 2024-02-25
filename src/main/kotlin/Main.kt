@@ -230,7 +230,7 @@ fun main() {
     // this fun Also() looks Let() fun with 'it' variable already declared implicitly,
     //  but it returns a object reference as Apply() function to do a additional action
 
-    Machine( ).also {
+    var newMachine = Machine( name= "Chappie", null, 2000,  id = 238238).also {
           it.writeCreationlog( obj = it ) // sending the recently Machine() instance created
     }
 }

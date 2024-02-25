@@ -121,7 +121,7 @@ data class  Machine ( var name :String, var dimensions: Any?,  var powerWatts : 
     fun checkIdMachine(): Boolean = ( this.id > 1000 )
 
     fun writeCreationlog( obj :Machine ){
-        println("this instance declare machine '${obj.name}' now!");
+        println("this instance declared machine '${obj.name}' now!");
     }
     //  overload of the constructor class
 }
