@@ -148,8 +148,9 @@ fun rentPriceWithObjectExpression( standard: Int, festivityDays: Int, specialDay
 
 
 object Player{ // declaring a object with singleton pattern
+    private var token = "sdssddddw3434334343"
     fun takeParams( username: String, password: String){
-         println("the player '$username' has been login with password '$password''");
+         println("the player '$username' has been login with password $password  and token: '${this.token}''");
     }
 }
 fun useObjectDeclaration(){
@@ -257,6 +258,8 @@ fun highOrderFunctionsAsReturn() : (Double) -> Long {
 }
 
 
+
+//===================== Lambda funcs =======================
 fun lambdaFunExamples(){
 
              // typing the lambda func
@@ -274,13 +277,59 @@ fun lambdaFunExamples(){
           // adding the uppercase function reference directly to variable
     val upperCase5 :(String) -> String = String::uppercase
 
-
     println(" ${upperCase1("type word in uppercase! ")}  \n" +
                 " ${upperCase2("type word in uppercase! ")}  \n" +
                 " ${upperCase3("type word in uppercase! ")}  \n" +
                 " ${upperCase4("type word in uppercase! ")}  \n" +
                 " ${upperCase5("type word in uppercase! ")}  \n");
 }
+
+
+
+
+//=============== Extension funcs and Propetiers =======================
+data class Item( val name: String, val price: Float );
+
+data class Order( val items : Collection<Item> )
+
+// using a extension properties for class 'Order'
+val Order.commaDelimitedItemNames: String get() = items.map{ it.name }.joinToString()
+// overwriting the Get() func
+
+
+fun extensionsFunctions(){
+
+    // adding the extensions functions to class 'Order'
+    fun Order.maxPricedItemValue() : Float = this.items.maxByOrNull { it.price }?.price ?: 0F ;
+    // OR
+    /*
+    fun Order.maxPricedItemValue() : Float {
+         var valu :Item? =  this.items.maxByOrNull { it.price }
+
+         if( valu ==null)
+             return 0F
+
+         return valu.price
+    }
+    */
+
+    fun Order.maxPricedItemName() :String = this.items.maxByOrNull { it.price }?.name ?: "NO_PRODUCTS"
+
+    val order = Order(
+            listOf(
+                    Item("Bread", 25.5f ),
+                    Item("Wine", 29.1f ),
+                    Item("Water", 5.1f ),
+            )
+    )
+    println("Max priced item value: ${order.maxPricedItemValue()}" );
+    println("Max priced item name: ${order.maxPricedItemName()}" );
+    println("Items:  ${order.commaDelimitedItemNames}" );
+}
+
+
+
+
 
 
 // =============== FORs ======================
