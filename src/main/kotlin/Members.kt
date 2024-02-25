@@ -102,8 +102,8 @@ data class User( var name: String, var id: Int ){
     override fun equals( other: Any? ) = other is User && other.id == this.id
 
     infix fun liked( other: User) {
-         this.likedPeople.add( other )
-         println("  ${this.name} liked ${other.name}");
+             this.likedPeople.add( other )
+             println("  ${this.name} liked ${other.name}");
     }
 }
 

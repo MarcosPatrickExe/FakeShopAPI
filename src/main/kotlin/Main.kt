@@ -2,6 +2,7 @@ package org.example
 import Vehicle
 import Vehicle.*;
 import java.awt.Color;
+import java.util.Vector
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -234,9 +235,19 @@ fun main() {
           it.writeCreationlog( obj = it ) // sending the recently Machine() instance created
     }
 
+
     println("\n\n======== Infix functions ============\n");
     InfixFunctions();
 
+
+    println("\n\n======== High-Order functions ============\n");
+    val vetorA = listOf( 3,  -5);
+    val vetorB = listOf( -20 , 35 )
+
+    fun funScalarProduct( a : List<Int>, b: List<Int> ) =  (a[0] * b[0])  +  (a[1] * b[1])
+
+    var result = highOrdeFunctions( X= vetorA , Y= vetorB, ::funScalarProduct   ); // sending a callback function with ::
+    println("the Scalar product between a( 3, -5)  and   b( -20, 35) is:  $result")
 
 }
 

@@ -224,6 +224,13 @@ fun InfixFunctions(){
 
 
 
+//================== High Order Funcs =====================
+fun highOrdeFunctions( X:List<Int>,  Y: List<Int>, sumTotal: ( List<Int>, List<Int>) ->  Int ): String   {
+      return  sumTotal( X , Y).toString();
+}
+
+
+
 
 
 // =============== FORs ======================
