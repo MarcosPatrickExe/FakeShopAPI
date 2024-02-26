@@ -1,8 +1,14 @@
 package org.example
 import Vehicle
 import Vehicle.*;
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.awt.Color;
 import java.util.Vector
+import kotlin.coroutines.*;
+import kotlin.time.measureTime
+
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -266,8 +272,9 @@ fun main() {
     highOrdeFunctionsAsParameter()
 
 
-    val funReturned: (Double) -> Long =
-        highOrderFunctionsAsReturn() // Getting the function from 'highOrderFunctionsAsReturn( )'
+    val funReturned: (Double) -> Long = highOrderFunctionsAsReturn()
+    // Getting the function from 'highOrderFunctionsAsReturn( )'
+
     println(
         "\n  value of de fun 'funReturned()'  sending the 27.5 as parameter " +
                 "and it square is  =>\n  ${funReturned(27.5)}"
@@ -280,9 +287,16 @@ fun main() {
 
     println("======== Extension functions ============\n");
     extensionsFunctions()
-
     extensionsFunctionsGenerics();
+
+
+    println("======== Suspend functions and Coroutine ============\n");
+    // coroutine simplifies asynchronous calls
+    // this example needs installation of the Kotlin library  "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3" in your project!
+    executeTheSuspendFunc();
 }
+
+
 
 
 

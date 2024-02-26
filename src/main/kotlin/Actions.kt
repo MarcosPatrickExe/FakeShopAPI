@@ -1,6 +1,10 @@
 package org.example
 import Vehicle
 import Vehicle.*
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 // ======  FILE FOR DECLARATION OF FUNCTIONS  =========
 
@@ -340,8 +344,26 @@ fun extensionsFunctionsGenerics(){
       println(" 'null.nullSafeToString' =>  $isNull")
       println(" 'kotlin.nullSafeToString' =>  ${ "Kotlin".nullSafeToString() }")
 }
+//==================== END =================================
 
 
+
+
+//=============== Extension Funcs Generics=======================
+// declaring the suspend function
+suspend fun doSomethingUsefulOne()  = coroutineScope{
+    launch {
+        println(" processing data.....");
+        delay(3000L)
+        println(" DATA LOADED !!!  ")
+    }
+}
+
+fun executeTheSuspendFunc() = runBlocking {
+    // should be called only from a coroutine function scope
+    println(" Starting reading asynchronous data ")
+    doSomethingUsefulOne();
+}
 
 
 
