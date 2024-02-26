@@ -1,14 +1,5 @@
 package org.example
-import Vehicle
-import Vehicle.*;
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import java.awt.Color;
-import java.util.Vector
-import kotlin.coroutines.*;
-import kotlin.time.measureTime
-
+import java.awt.Color
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -290,7 +281,7 @@ fun main() {
     extensionsFunctionsGenerics();
 
 
-    println("======== Suspend functions and Coroutine ============\n");
+    println("\n\n ======== Suspend functions and Coroutine ============\n");
     // coroutine simplifies asynchronous calls
     // this example needs installation of the Kotlin library  "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3" in your project!
     executeTheSuspendFunc();
